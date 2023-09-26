@@ -1,0 +1,454 @@
+:root {
+	--azul_2: #0e2f73;
+	--azul_1: #0b1c40;
+	--azul_3: #2573d9;
+	--azul_4: #4192d9;
+	--cinza: rgb(242, 242, 242);
+	--danger: rgb(184, 1, 1);
+	--success: #14701c;
+}
+       
+    /* Estilos para o modal (oculto por padrão) */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        margin-top: 30px;
+        margin-left: 70px;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+    }
+    .modal.show {
+      display: block;
+      opacity: 1; /* Quando exibido, a opacidade é 1 (visível) */
+  }
+    #myModal2{
+      margin-top: 0px;
+      padding-top: 60px;
+      padding-left: 20px;
+    }
+
+    /* Estilos para o conteúdo do modal com transição de fade-in */
+    .modal-content {
+        background: linear-gradient(#4b0a96,#0e2f73);
+        border:none;
+        margin: 10% auto;
+        margin-top: 80px;
+        padding: 20px;
+        border: 1px solid #888;
+        max-width: 600px;
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        color:#fff;
+    }
+
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 10px;
+      cursor: pointer;
+  }
+  h1{
+    color: black;
+    padding: 10px;
+  }
+
+    /* Estilos para o botão de fechar */
+    #fecharModal {
+        float: right;
+        cursor: pointer;
+        color: var(--danger);
+        font-size: 40px;
+    }
+
+    .NomeDeUsuario, .CargoUsuario{
+      font-size: 15px;
+    }
+    
+
+    /* Animação de fade-in */
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+    table{
+        background-color: #fff;
+    }
+    .perfil_aluno{
+        border-radius: 100%;
+        width: 70px;
+        height: 70px;
+        background-color: var(--azul_3);
+        
+    }
+    .container{
+        padding: .98rem;
+        max-width: 600px;
+        margin: auto;
+        background-color: var(--azul_1);
+        color: #fff;
+    }
+    
+    .caixa{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: .7rem;
+        font-size: 1.12rem;
+    }
+    .caixa input{
+        border: none;
+        padding: .98rem;
+        border-radius: .45rem;
+        width: 100%;
+    }
+    
+    input[type="submit"]{
+        background-color: var(--success);
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    /* Editor de texto */
+
+    button{
+      padding: 2px;
+  }
+  
+  .containerText{
+      width: 100%;
+      height: 100%;
+      margin: 0px auto;
+  }
+  
+  .tools{
+      width: 100%;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      background-color: #ddd;
+  }
+  
+  .txt-tools{
+      border-right: 1px solid gray;
+      padding-right: 10px;
+      margin-right: 10px;
+  }
+  
+  #folha{
+      width: 100%;
+      font-size: 18pt;
+      height: 300px;
+      padding: 20px;
+      resize: none;
+      outline: none;
+      font-family: Arial;
+  }
+  
+  .erase{
+      float: right;
+  }
+  
+  .negrito{
+      font-weight: bold;
+  }
+  
+  .italico{
+      font-style: italic;
+  }
+  
+  .sublinhado{
+      text-decoration: underline;
+  }
+
+    
+    @media screen and (min-width: 100px){
+        .container form{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: .8rem;
+        }
+    }
+    
+    @media screen and (min-width: 200px){
+        .container form{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    .pesquisa_aluno{
+        border: 1px solid --azul_4;
+        border-radius: 20px;
+        height: 38px;
+        display: inline-block;
+        align-items: center;
+        overflow-x: hidden;
+        background-color: var(--cinza);
+        
+        
+    }
+    .pesquisa_aluno input{
+        height: 100%;
+        padding: .5rem;
+        border: none;
+        outline: none;
+        background-color: #fff;
+        border-radius: 20px;
+        width: 300px;
+        
+    }
+    .pesquisa_aluno  span{
+        padding: 0rem 1rem;
+        font-size: 1.5rem;
+        color: var(--azul_4);
+    }
+    .botaoCadastro{
+        background-color: var(--azul_1);
+        color: #fff;
+        padding: 1%;
+        margin-bottom: 5px;
+        border-radius: 10px;
+    }
+    td img{
+        border-radius: 100%;
+        width: 55px;
+        height: 55px;
+
+    }
+    .whatsapp{
+      width: 25px;
+      height: 25px;
+    }
+    #openModalBtn2{
+      
+      border: none;
+      font-size: medium;
+      cursor: pointer;
+      
+    }
+
+    .botaoGeral{
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--azul_1); /* Cor de fundo padrão */
+      color: #fff; /* Cor do texto */
+      text-decoration: none;
+      border-radius: 15px 0px 15px 0px;
+      transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+      cursor: pointer;
+
+    }
+    .botaoGeral:hover{
+        background-color: rgb(68, 3, 153); /* Nova cor de fundo quando em hover */
+      }
+    
+/* LISTA CADASTRO */
+
+    #format {
+      -webkit-appearance:none;
+      -moz-appearance:none;
+      -ms-appearance:none;
+      appearance:none;
+      outline:0;
+      box-shadow:none;
+      border:0!important;
+      background: var(--azul_3);
+      background-image: none;
+      flex: 1;
+      padding: 0 .5em;
+      color:#fff;
+      cursor:pointer;
+      font-size: 1em;
+      font-family: 'Open Sans', sans-serif;
+   }
+   select::-ms-expand {
+      display: none;
+   }
+   .select {
+      position: relative;
+      display: flex;
+      width: 20em;
+      height: 3em;
+      line-height: 3;
+      background: var(--cinza);
+      overflow: hidden;
+      border-radius: .25em;
+   }
+   .select::after {
+      content: '\25BC';
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0 1em;
+      background: #ffffff;
+      cursor:pointer;
+      pointer-events:none;
+      transition:.25s all ease;
+   }
+   .select:hover::after {
+      color: #ffffff;
+   }
+
+    /* TABELA */
+ 
+    .container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    } 
+  
+    table{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+      table-layout: fixed;
+    } 
+    
+    table, th, td {
+      border: 2px solid #4472c4;
+      border-collapse: collapse;
+    }
+    
+    thead tr{
+      background-color: var(--azul_1);
+      color: white;
+    }
+    
+    tr{
+      font-size: 1.2rem;
+      background-color: var(--cinza);
+      border: 1px solid #4472c4;
+    }
+    
+    th,
+    td {
+      padding: 1rem;
+      text-align: center;
+      border: none;
+    }
+    
+    .tamanhoTH{
+      width: 10px;
+    }
+    #table-responsive{
+      
+    }
+    
+    @media screen and (max-width: 600px) {
+      table {
+        border: 0;
+      }
+      
+      table thead{
+        border: none;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+    
+      table tr {
+        border: 0;
+        border-bottom: 3px solid rgba(68, 114, 196, .8);
+        display: block;
+        margin-bottom: .625em;
+     }
+      
+      table td {
+        border: 1px solid rgba(68, 114, 196, .5);
+        font-size: .8em;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+     }
+      
+     td::before{
+        content: attr(data-label);
+        font-weight: 700;
+        text-transform: uppercase;
+     } 
+    }
+    /* AVALIAÇÃO POR FIFA CARDS */
+
+     /* Estilos CSS para a carta FIFA */
+     #fifa-card {
+      width: 200px;
+      border: 1px solid #000;
+      border-radius: 10px 0px 10px 0px;
+      padding: 10px;
+      text-align: center;
+      margin: 20px;
+      margin-left: 5px;
+      background-image: url(/img/fifacard.jpg);
+      color: #fff;
+  }
+ 
+  #fifa-card img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  #logoFifacard{
+    border-radius: 0px;
+    
+  }
+  .player-name {
+      font-weight: bold;
+  }
+  .player-attribute {
+      font-size: 16px;
+  }
+  .low {
+      color: red;
+  }
+  .medium {
+      color: orange;
+  }
+  .high {
+      color: green;
+  }
+
+  .colunaAvaliacao{
+      width: 50%;
+      display: inline-block;
+      box-sizing: border-box; /* Isso evita que as bordas e o preenchimento afetem a largura total */
+      vertical-align: top; /* Isso alinha as colunas ao topo */
+  }
+  
+  .habilidadesAvaliacao{
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .tamanhoAvaliacao{
+    width: 320px;
+  }
+  .tamanhoAvaliacao label{
+    color: #f2f2f2;
+  }
+
+  .habilidadesEspeciais{
+    background: transparent;
+    color: #f2f2f2;
+    border: none;
+    height: 50px;
+    width: 180px;
+    padding-top: 10px;
+    padding-left: 5px;
+    margin-left: 5px;
+  }
+  canvas{
+    margin-left: 30px;
+  }
+  .marcadoresAvaliacao h1, h2, label, input {
+    padding: 10px;
+  }
+

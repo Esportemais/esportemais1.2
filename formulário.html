@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>DASHBORD</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/e7fb0ed515.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<link rel="stylesheet"  href="formulario.css"> <!-- Importe seu arquivo CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+
+  
+
+</head>
+<body>
+	<input type="checkbox" id="menu" name="">
+	<div class="sidebar">
+		<div class="sidebar-brand">
+	
+            <img class="logo_sidebar" src="/img/Larana__Inc.__4_-re.png" alt="">
+		</div>
+		<p class="accueil"><label for="menu"><span class="fa fa-bars"></span></label><span class="accueil">MENU</span></p>
+		<div class="sidebar-menu">
+			<ul>
+				<li>
+					<a href="/index.html" id="animated-link" class="fa-solid fa-home">&#128202; RESUMO</a>			
+				</li>
+					<li>
+						<a href="/formulário.html" id="animated-link" class="fa-solid fa-home">&#128102;ADMINISTRATIVO</a>
+				</li>
+				<li>
+						<a href="turma.html" id="animated-link" class="fa-solid fa-home">&#128104;&#8205;&#128104;&#8205;&#128102;&#8205;&#128102;CONTROLE DE TURMAS</a>
+				</li>
+				<li>
+						<a href="/financeiro.html" id="animated-link" class="fa-solid fa-home">&#128181;CONTROLE FINANCEIRO</a>
+				</li>
+				<li>
+						<a href="/index.html" id="animated-link" class="fa-solid fa-home">&#127941;CENTRAL DE VENDAS</a>
+				</li>
+				<li>
+						<a href="/index.html" id="animated-link" class="fa-solid fa-home">&#128209;RELATÓRIOS</a>
+				</li>
+				<li>
+						<a href="/index.html" id="animated-link" class="fa-solid fa-home">⚽FERRAMENTAS DE TREINO</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<button onclick="toggleSidebar()"></button>
+
+	<div class="content">
+        <main>
+
+			<!------------------------------------------- TABELA DO ALUNO --------------------------------------------------------------->
+
+      <button id="openModalBtn1" class="botaoGeral">CADASTRAR ALUNO</button>
+			<h1 class="Titulo">Lista de Alunos</h1>
+            <div class="row">
+                <table class="table table-responsive" id="table-responsive">
+                  <thead>
+                    <tr>
+                      <th width="100px">FOTO</th>
+                      <th width="200px">NOME</th>
+                      <th width="130px">NASCIMENTO</th>
+                      <th width="150px">CONTATO</th>
+                      <th>DETALHADO</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><img src="/img/crianca-5.webp"  width="30px" alt="" sizes="" srcset=""></td>
+                      <td>José da Silva</td>
+                      <td>27/04/2009</td>
+                      <td> <button id="openModalBtn2">(21)979442335<img class="whatsapp" src="/img/whatsapp.jpg" alt="" sizes="" srcset=""></button></td>
+                      <td><button id="openModalBtn5"  class="botaoGeral">EDITAR</button><button id="openModalBtn4" class="botaoGeral">FINANCEIRO</button><button class="botaoGeral">MATRÍCULA</button><button id="openModalBtn3" class="botaoGeral">AVALIAÇÃO</button></td>
+                    </tr>
+                    <tr>
+                      <td><img src="/img/crianca-6.webp"  width="30px" alt="" sizes="" srcset=""></td>                     
+                      <td>Ribamar Feitosa</td>
+                      <td>22/05/2012</td>
+                      <td> <button id="openModalBtn2">(21)979442335<img class="whatsapp" src="/img/whatsapp.jpg" alt="" sizes="" srcset=""></button></td>
+                      <td><button id="openModalBtn5"  class="botaoGeral">EDITAR</button><button id="openModalBtn4" class="botaoGeral">FINANCEIRO</button><button class="botaoGeral">MATRÍCULA</button><button id="openModalBtn3" class="botaoGeral">AVALIAÇÃO</button></td>
+                    </tr>
+                    <tr>
+                      <td><img src="/img/crianca-2.webp"  width="30px" alt="" sizes="" srcset=""></td>  
+                      <td>Antônio da Costa</td>
+                      <td>22/05/2012</td>
+                      <td> <button id="openModalBtn2">(21)979442335<img class="whatsapp" src="/img/whatsapp.jpg" alt="" sizes="" srcset=""></button></td>
+                      <td><button id="openModalBtn5"  class="botaoGeral">EDITAR</button><button id="openModalBtn4" class="botaoGeral">FINANCEIRO</button><button class="botaoGeral">MATRÍCULA</button><button id="openModalBtn3" class="botaoGeral">AVALIAÇÃO</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="/img/crianca-3.webp"  width="30px" alt="" sizes="" srcset=""></td>
+                        <td>José da Silva</td>
+                        <td>22/05/2012</td>
+                        <td> <button id="openModalBtn2">(21)979442335<img class="whatsapp" src="/img/whatsapp.jpg" alt="" sizes="" srcset=""></button></td>
+                        <td><button id="openModalBtn5"  class="botaoGeral">EDITAR</button><button id="openModalBtn4" class="botaoGeral">FINANCEIRO</button><button class="botaoGeral">MATRÍCULA</button><button id="openModalBtn3" class="botaoGeral">AVALIAÇÃO</button></td>
+                      </tr>
+                      <tr>
+                        <td><img src="/img/crianca-4.webp"  width="30px" alt="" sizes="" srcset=""></td>                     
+                        <td>Ribamar Feitosa</td>
+                        <td>22/05/2012</td>
+                        <td> <button id="openModalBtn2">(21)979442335<img class="whatsapp" src="/img/whatsapp.jpg" alt="" sizes="" srcset=""></button></td>
+                        <div class="colunaTabela">
+                        <td><button id="openModalBtn5"  class="botaoGeral">EDITAR</button><button id="openModalBtn4" class="botaoGeral">FINANCEIRO</button></div>
+                        <button class="botaoGeral">MATRÍCULA</button><button id="openModalBtn3" class="botaoGeral">AVALIAÇÃO</button></td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- end inner content -->
+            </div>
+            <!-- end content -->
+          </div>
+        </div>
+
+		<!------------------------------------------- MODAL CADASTRO DO ALUNO --------------------------------------------------------------->
+		<div id="myModal1" class="modal">
+      <div class="modal-content">
+          <span class="close" id="closeModalBtn1">&times;X</span>
+          <span id="fecharModal" style="float: right; cursor: pointer;">&times;</span>
+
+  
+        <!--CAMERA PARA TIRAR FOTO DO ALUNO-->
+        
+        <button id="openCameraButton" class="botaoGeral">Abrir Câmera</button>
+        <button id="captureButton" disabled class="botaoGeral">Capturar Foto</button>
+        <button id="saveButton" style="display: none;" class="botaoGeral">Salvar Foto no Servidor</button>
+        <button id="reopenCameraButton" style="display: none;" class="botaoGeral">Fechar camera</button>
+        <video id="cameraFeed" autoplay style="width: 100%; height: auto;"></video>
+        <canvas id="canvas" style="display: none;"></canvas>
+        <img id="capturedImage" style="display: none; width: 100%; height: auto;">
+        <!--FIM DA CAMERA-->
+
+
+        
+        <div class="container">
+            <div class="cadastro_modal">
+            <form action="POST">
+                <div class="caixa">
+                    <label>Nome completo</label>
+                    <input type="text">
+                </div>
+                <div class="caixa">
+                    <label>Data de nascimento</label>
+                    <input type="date">
+                </div>
+                <div class="caixa">
+                    <label>CPF</label>
+                    <input type="number">
+                </div>
+    
+                <div class="caixa">
+                    <label>Celular</label>
+                    <input type="tel">
+                </div>
+
+                <div class="caixa">
+                    <label>CEP</label>
+                    <input type="text">
+                </div>
+    
+                <div class="caixa">
+                    <label>Endereço</label>
+                    <input type="text">
+                </div>
+    
+                <div class="caixa">
+                    <label>Responsavel</label>
+                    <input type="name">
+                </div>
+
+                <div class="caixa">
+                    <label>Documento de identidade</label>
+                    <input type="file">
+                </div>
+                <div class="caixa">
+                  <label>Turma</label>
+                  <select name="format" id="format">
+                    <option selected disabled>NENHUMA</option>
+                    <option value="pdf">TURMA A</option>
+                    <option value="txt">TURMA B</option>
+                    <option value="epub">TURMA C</option>
+                    <option value="fb2">TURMA D</option>
+                    <option value="mobi">TURMA E</option>
+                 </select>
+              </div>
+    
+                <div class="caixa">
+                    <input type="submit" value="Enviar">
+                </div>
+
+
+
+            </form>
+ </div>
+    </div>
+  </div>
+</div>
+
+<!------------------------------------------- MODAL CADASTRO DO ALUNO --------------------------------------------------------------->
+<div id="myModal2" class="modal">
+  <div class="modal-content">
+      <span class="close" id="closeModalBtn2">&times;</span>
+      <span id="fecharModal2" style="float: right; cursor: pointer;">&times;</span>
+        <div class="containerText">
+          <h1>Escreva aqui sua mensagem para o aluno</h1>
+          <div class="tools">
+              <div class="txt-tools">
+                  <button onclick="document.getElementById('folha').style.textAlign = 'left'"><i class="fas fa-align-left"></i></button>
+                  <button onclick="document.getElementById('folha').style.textAlign = 'center'"><i class="fas fa-align-center"></i></button>
+                  <button onclick="document.getElementById('folha').style.textAlign = 'right'"><i class="fas fa-align-right"></i></button>
+                  <button onclick="document.getElementById('folha').style.textAlign = 'justify'"><i class="fas fa-align-justify"></i></button>
+              </div>
+              <div class="txt-tools">
+                  <button onclick="negrito()"><i class="fas fa-bold"></i></button>
+                  <button onclick="italico()"><i class="fas fa-italic"></i></button>
+                  <button onclick="sublinhado()"><i class="fas fa-underline"></i></button>
+              </div>
+              
+              <div class="txt-tools">
+                  <button onclick="lorem()">Lorem...</button>
+              </div>
+              <div class="txt-tools">
+                  <i class="fas fa-font"></i>
+                  <select name="fonte" id="fonte" onchange="selectFont(this)">
+                      <option>Georgia</option>
+                      <option>Palatino Linotype</option>
+                      <option>Book Antiqua</option>
+                      <option>Times New Roman</option>
+                      <option>Arial</option>
+                      <option>Helvetica</option>
+                      <option>Arial Black</option>
+                      <option>Impact</option>
+                      <option>Lucida Sans Unicode</option>
+                      <option>Tahoma</option>
+                      <option>Verdana</option>
+                      <option>Courier New</option>
+                      <option>Lucida Console</option>
+                  </select>
+                  
+                  <i class="fas fa-text-height"></i>
+                  
+                  <select name="tamanho" id="fonte-tamanho" onchange="selectFontSize(this)">
+                      <option>6pt</option>
+                      <option>7pt</option>
+                      <option>8pt</option>
+                      <option>9pt</option>
+                      <option>10pt</option>
+                      <option>11pt</option>
+                      <option>12pt</option>
+                      <option>14pt</option>
+                      <option>16pt</option>
+                      <option>18pt</option>
+                      <option>20pt</option>
+                      <option>24pt</option>
+                      <option>28pt</option>
+                      <option>36pt</option>
+                  </select>
+              </div>
+  
+              <div class="txt-tools">
+                  <i class="fas fa-palette"></i>
+                  <input type="color" id="font-color">
+                  <button onclick="selectFontColor()"><i class="fas fa-check-square"></i></button>
+              </div>
+  
+              <div class="txt-tools erase">
+                  <button onclick="document.getElementById('folha').innerText = ''">
+                      <i class="fas fa-eraser"></i>
+                  </button>
+              </div>
+          </div>
+          <textarea name="corpo" id="folha"></textarea>
+          <button class="botaoGeral">Enviar</button>
+      </div>
+  </div></div>
+  </div>
+</div>
+
+<!------------------------------------------- MODAL CADASTRO DO ALUNO --------------------------------------------------------------->
+
+<div id="myModal3" class="modal">
+  <div class="modal-content">
+      <span class="close" id="closeModalBtn3">&times;</span>
+      <div class="colunaAvaliacao" id="fifa-card">
+        <img src="/img/Larana__Inc.__4_-re.png" id="logoFifacard" alt="" sizes="" srcset="">
+        <img src="/img/crianca-2.webp" id="perfilFifacard" alt="" sizes="" srcset="">
+        <div class="player-attribute">
+          Score <span id="average" class="medium">57.5</span>
+      </div>
+        <div class="player-name">Cristiano Ronaldo</div>
+        <div class="player-attribute">
+            Frequência: <span id="frequency" class="medium">50</span>
+            <input type="range" id="frequency-range" min="1" max="100" step="1" value="50" oninput="updateAttribute('frequency', this.value)">
+        </div>
+        <div class="player-attribute">
+            Técnica: <span id="technique" class="medium">60</span>
+            <input type="range" id="technique-range" min="1" max="100" step="1" value="60" oninput="updateAttribute('technique', this.value)">
+        </div>
+        <div class="player-attribute">
+            Resistência: <span id="endurance" class="medium">70</span>
+            <input type="range" id="endurance-range" min="1" max="100" step="1" value="70" oninput="updateAttribute('endurance', this.value)">
+        </div>
+        <div class="player-attribute">
+            Mental: <span id="mental" class="medium">55</span>
+            <input type="range" id="mental-range" min="1" max="100" step="1" value="55" oninput="updateAttribute('mental', this.value)">
+        </div>
+
+        <div style="width: 150px; height: 150px;">
+          <canvas id="myRadarChart"></canvas>
+      </div>
+        
+        <div>
+          <textarea name="Hábilidades_especiais" class="habilidadesEspeciais" cols="30" rows="10">Hábilidades Especiais</textarea>
+        </div>
+    </div>
+  
+    <div class="colunaAvaliacao">
+      <div class="marcadoresAvaliacao">
+      <h1 style="color: white;">Avaliação atleta</h1>
+    
+      <!-- Categorias: Ataque, Defesa, Drible -->
+      <h2>Categoria: Ataque</h2>
+      <label for="ataqueFraco">Fraco</label>
+      <input type="checkbox" id="ataqueFraco" value="30">
+      
+      <label for="ataqueMedio">Médio</label>
+      <input type="checkbox" id="ataqueMedio" value="60">
+      
+      <label for="ataqueForte">Forte</label>
+      <input type="checkbox" id="ataqueForte" value="90">
+      
+      <!-- Categoria: Defesa -->
+      <h2>Categoria: Defesa</h2>
+      <label for="defesaFraco">Fraco</label>
+      <input type="checkbox" id="defesaFraco" value="30">
+      
+      <label for="defesaMedio">Médio</label>
+      <input type="checkbox" id="defesaMedio" value="60">
+      
+      <label for="defesaForte">Forte</label>
+      <input type="checkbox" id="defesaForte" value="90">
+      
+      <!-- Categoria: Drible -->
+      <h2>Categoria: Drible</h2>
+      <label for="dribleFraco">Fraco</label>
+      <input type="checkbox" id="dribleFraco" value="30">
+      
+      <label for="dribleMedio">Médio</label>
+      <input type="checkbox" id="dribleMedio" value="60">
+      
+      <label for="dribleForte">Forte</label>
+      <input type="checkbox" id="dribleForte" value="90">
+
+      <!-- Categoria: Foco -->
+      <h2>Categoria: Foco</h2>
+      <label for="focoFraco">Fraco</label>
+      <input type="checkbox" id="focoFraco" value="30">
+      
+      <label for="focoMedio">Médio</label>
+      <input type="checkbox" id="focoMedio" value="60">
+      
+      <label for="focoForte">Forte</label>
+      <input type="checkbox" id="focoForte" value="90">
+
+      <!-- Categoria: Mental -->
+      <h2>Categoria: Mental</h2>
+      <label for="mentalFraco">Fraco</label>
+      <input type="checkbox" id="mentalFraco" value="30">
+      
+      <label for="mentalMedio">Médio</label>
+      <input type="checkbox" id="mentalMedio" value="60">
+      
+      <label for="mentalForte">Forte</label>
+      <input type="checkbox" id="mentalForte" value="90">
+
+      <!-- Categoria: Passe -->
+      <h2>Categoria: Passe</h2>
+      <label for="passeFraco">Fraco</label>
+      <input type="checkbox" id="passeFraco" value="30">
+      
+      <label for="passeMedio">Médio</label>
+      <input type="checkbox" id="passeMedio" value="60">
+      
+      <label for="passeForte">Forte</label>
+      <input type="checkbox" id="passeForte" value="90">
+    </div>
+      
+      <!-- Div onde o gráfico será renderizado -->
+      <div style="width: 400px; height: 100px;">
+          <canvas id="myRadarChart"></canvas>
+      </div>
+    </div>
+    <button class="botaoGeral" style="background-color:green;">SALVAR</button>
+  </div>
+</div>
+</div>
+
+
+<!------------------------------------------- MODAL FINANCEIRO --------------------------------------------------------------->
+<div id="myModal4" class="modal">
+  <div class="modal-content">
+      <span class="close" id="closeModalBtn4">&times;</span>
+      <p>FINANCEIRO</p>
+  </div>
+</div>
+
+<!------------------------------------------- MODAL EDITAR DADOS DO ALUNO --------------------------------------------------------------->
+<div id="myModal5" class="modal">
+  <div class="modal-content">
+      <span class="close" id="closeModalBtn5">&times;</span>
+      <p>EDITAR DADOS DO ALUNO</p>
+  </div>
+</div>
+
+
+
+
+
+	<script src="formulario.js"></script>
+</body>
+</html>
+
+
+
+        </main>

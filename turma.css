@@ -1,0 +1,305 @@
+:root {
+	--azul_2: #0e2f73;
+	--azul_1: #0b1c40;
+	--azul_3: #2573d9;
+	--azul_4: #4192d9;
+	--cinza: rgb(242, 242, 242);
+	--danger: rgb(184, 1, 1);
+	--success: #14701c;
+}
+       
+    /* Estilos para o modal (oculto por padrão) */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        margin-top: 30px;
+        margin-left: 70px;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+    }
+    .modal.show {
+      display: block;
+      opacity: 1; /* Quando exibido, a opacidade é 1 (visível) */
+  }
+    #myModal2{
+      margin-top: 0px;
+      padding-top: 60px;
+      padding-left: 20px;
+    }
+
+    /* Estilos para o conteúdo do modal com transição de fade-in */
+    .modal-content {
+        background: linear-gradient(#2b025a,#0e2f73);
+        border:none;
+        margin: 10% auto;
+        margin-top: 80px;
+        padding: 20px;
+        border: 1px solid #888;
+        max-width: 600px;
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        color:#fff;
+    }
+
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 10px;
+      cursor: pointer;
+  }
+  h1{
+    color: black;
+    padding: 10px;
+  }
+  .tituloCadastroturma{
+    color: white;
+    padding-left: 0px;
+    padding-bottom: 20px;
+  }
+ 
+
+    /* Estilos para o botão de fechar */
+    #fecharModal {
+        float: right;
+        cursor: pointer;
+        color: var(--danger);
+        font-size: 40px;
+    }
+
+    .NomeDeUsuario, .CargoUsuario{
+      font-size: 15px;
+    }
+    
+
+    /* Animação de fade-in */
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+    table{
+        background-color: #fff;
+    }
+    .perfil_aluno{
+        border-radius: 100%;
+        width: 70px;
+        height: 70px;
+        background-color: var(--azul_3);
+        
+    }
+    .container{
+        padding: 10px;
+        max-width: 600px;
+        color: #fff;
+    }
+    
+    .caixa{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: .7rem;
+        font-size: 1.12rem;
+    }
+    .caixa input{
+        border: none;
+        padding: .98rem;
+        border-radius: .45rem;
+        width: 100%;
+    }
+    
+    input[type="submit"]{
+        background-color: var(--success);
+        font-weight: bold;
+        color: #fff;
+    }
+    .Titulodiadasemana{
+      color: white;
+    }
+    
+    
+/* LISTA CADASTRO */
+
+    #format {
+      -webkit-appearance:none;
+      -moz-appearance:none;
+      -ms-appearance:none;
+      appearance:none;
+      outline:0;
+      box-shadow:none;
+      border:0!important;
+      background: var(--azul_3);
+      background-image: none;
+      flex: 1;
+      padding: 0 .5em;
+      color:#fff;
+      cursor:pointer;
+      font-size: 1em;
+      font-family: 'Open Sans', sans-serif;
+   }
+   select::-ms-expand {
+      display: none;
+   }
+   .select {
+      position: relative;
+      display: flex;
+      width: 20em;
+      height: 3em;
+      line-height: 3;
+      background: var(--cinza);
+      overflow: hidden;
+      border-radius: .25em;
+   }
+   .select::after {
+      content: '\25BC';
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0 1em;
+      background: #ffffff;
+      cursor:pointer;
+      pointer-events:none;
+      transition:.25s all ease;
+   }
+   .select:hover::after {
+      color: #ffffff;
+   }
+
+    /* TABELA */
+ 
+    .container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    } 
+  
+    table{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+      table-layout: fixed;
+    } 
+    
+    table, th, td {
+      border: 2px solid #4472c4;
+      border-collapse: collapse;
+    }
+    
+    thead tr{
+      background-color: var(--azul_1);
+      color: white;
+    }
+    
+    tr{
+      font-size: 1.2rem;
+      background-color: var(--cinza);
+      border: 1px solid #4472c4;
+    }
+    
+    th,
+    td {
+      padding: 1rem;
+      text-align: center;
+      border: none;
+    }
+    
+    .tamanhoTH{
+      width: 10px;
+    }
+
+    
+    @media screen and (max-width: 600px) {
+      table {
+        border: 0;
+      }
+      
+      table thead{
+        border: none;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+    
+      table tr {
+        border: 0;
+        border-bottom: 3px solid rgba(68, 114, 196, .8);
+        display: block;
+        margin-bottom: .625em;
+     }
+      
+      table td {
+        border: 1px solid rgba(68, 114, 196, .5);
+        font-size: .8em;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+     }
+      
+     td::before{
+        content: attr(data-label);
+        font-weight: 700;
+        text-transform: uppercase;
+     } 
+    }
+   
+    /* ESTILOS DA SELEÇÃO DE HORÁRIO TURMAS */
+
+    /* Estilize o elemento select */
+    select#horario {
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    /* Estilize as opções dentro do select */
+    select#horario option {
+      font-size: 14px;
+    }
+
+      /* AGENDA DE SELEÇÃO DE DIA DA SEMANA */
+      #agenda {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+        padding: 15px;
+    }
+  
+    #dia {
+        border: 1px solid white;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+    }
+  
+    #dia.selecionado {
+        background-color: var(--azul_4);
+        color: #fff;
+    }
+
+    /* ESTIUOS DOS BOTOES */
+
+    .botaoGeral{
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--azul_1); /* Cor de fundo padrão */
+      color: #fff; /* Cor do texto */
+      text-decoration: none;
+      border-radius: 15px 0px 15px 0px;
+      transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+      cursor: pointer;
+
+    }
+    .botaoGeral:hover{
+        background-color: rgb(68, 3, 153); /* Nova cor de fundo quando em hover */
+      }
+    

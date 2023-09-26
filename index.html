@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DASHBORD</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/e7fb0ed515.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="/index.js"></script>
+
+</head>
+<body>
+	<input type="checkbox" id="menu" name="">
+	<div class="sidebar">
+		<div class="sidebar-brand">
+	
+            <img class="logo_sidebar" src="/img/Larana__Inc.__4_-re.png" alt="">
+		</div>
+		
+		<div class="sidebar-menu">
+			<ul>
+				<li>
+					<a href="/index.html" id="animated-link" class="fa-solid fa-home">&#128202; RESUMO</a>			
+				</li>
+					<li>
+						<a href="/formulário.html" id="animated-link" class="fa-solid fa-home">&#128102;ADMINISTRATIVO</a>
+				</li>
+				<li>
+						<a href="turma.html" id="animated-link" class="fa-solid fa-home">&#128104;&#8205;&#128104;&#8205;&#128102;&#8205;&#128102;CONTROLE DE TURMAS</a>
+				</li>
+				<li>
+						<a href="/financeiro.html" id="animated-link" class="fa-solid fa-home">&#128181;CONTROLE FINANCEIRO</a>
+				</li>
+				<li>
+						<a href="/index.html" id="animated-link" class="fa-solid fa-home">&#127941;CENTRAL DE VENDAS</a>
+				</li>
+				<li>
+						<a href="/index.html" id="animated-link" class="fa-solid fa-home">&#128209;RELATÓRIOS</a>
+				</li>
+				<li>
+						<a href="/index.html" id="animated-link" class="fa-solid fa-home">⚽FERRAMENTAS DE TREINO</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<button onclick="toggleSidebar()"></button>
+
+	<div class="content">
+		
+		
+		<main>
+			
+		<p class="accueil"><label for="menu"><span class="fa fa-bars"></span></label><span class="accueil">MENU</span></p>
+			<div class="cards">
+				<div class="card-single1">
+					<div id="conteudo" class="hidden">
+						<h2 id="Cash">R$ 5.000,00</h2>
+						<small id="Cash">RECEITA</small>
+					</div>
+					<div>
+						<button id="toggleButton" class="fa-solid fa-eye" style="color: #1ba419;"></button><span class="fa-solid fa-sack-dollar" style="color: #1ba419;"></span>
+					</div>
+				</div>
+
+				<div class="card-single2">
+					<div>
+						<h2 id="gestaoAluno">+30</h2>
+						<small id="gestaoAluno">MATRICULAS NOVAS</small>
+					</div>
+					<div>
+						<span class="fa fa-light fa-plus" style="color: #0e2f73;"></span>
+					</div>
+				</div>
+				<a href="/lista_alunos.html"><div class="card-single3">
+					<div>
+						<h2 id="gestaoAluno">58</h2>
+						<small id="gestaoAluno">TOTAL DE ALUNOS</small>
+					</div>
+					<div>
+						<span class="fa fa-group" style="color: #0e2f73;"></span>
+					</div>
+				</div></a>
+				<div class="card-single4">
+					<div>
+						<h2 id="pay">R$ 2.300,30</h2>
+						<small id="pay">VALORES A RECEBER</small>
+					</div>
+					<div>
+						<span class="fa fa-money" style="color: #b41515;"></span>
+					</div>
+				</div>
+				<div class="card-single1">
+					<div>
+						<h2 id="Cash">R$ 2.300,30</h2>
+						<small id="Cash">VENDA DE PRODUTOS</small>
+					</div>
+					<div>
+						<span class="fa fa-money" style="color: #1ba419;"></span>
+					</div>
+				</div>
+				<div class="card-single4">
+					<div >
+						<h2 id="pay">R$ 2.300,30</h2>
+						<small id="pay">CUSTO OPERACIONAL</small>
+					</div>
+					<div>
+						<span class="fa fa-money" style="color: #b41515;"></span>
+					</div>
+				</div>
+				<div class="card-single3">
+					<div>
+						<h2 id="gestaoAluno">8</h2>
+						<small id="gestaoAluno">TOTAL DE TURMAS</small>
+					</div>
+					<div>
+						<span class="fa fa-money" style="color: #0e2f73;"></span>
+					</div>
+				</div>
+				<div class="card-single2">
+					<div>
+						<h2 id="gestaoAluno">3</h2>
+						<small id="gestaoAluno">ANIVERSARIANTES</small>
+					</div>
+					<div>
+						<span class="fa fa-money" style="color: #0e2f73;"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="composant">
+				<div class="ventes">
+					<div class="case">
+						<div class="header-case">
+							<h2>LISTA DE ULTIMOS PAGANTES</h2>
+							<a href="/lista_alunos.html"><button class="botaoGeral">Lista completa<span class="fa fa-arrow-right"></span></button></a>
+						</div>
+						<div class="body-case">
+							<div class="tableau">
+								<table width="100%">
+								  <thead>
+								    <tr>
+								      <td>Nome</td>
+								      <td>Turma</td>
+								      <td>Contato</td>
+									  <td>Status</td>
+								    </tr>
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td>Marcos Antonio</td>
+								      <td>TURMA 1</td>
+								      <td><span class="status-produit color-one"></span>(21) 9794252335</td>
+								    </tr>
+								    <tr>
+								      <td>Jackson Oliveira</td>
+								      <td>TURMA 1</td>
+								      <td><span class="status-produit color-two"></span>(21) 9794252335</td>
+								    </tr>
+								    <tr>
+								      <td>Larissa Alcantara</td>
+								      <td>TURMA 2</td>
+								      <td><span class="status-produit color-three"></span>(21) 9794252335</td>
+								    </tr>
+								     <tr>
+								      <td>Fabrício José</td>
+								      <td>TURMA 2</td>
+								      <td><span class="status-produit color-four"></span>(21) 9794252335</td>
+								    </tr>
+								     <tr>
+								      <td>Jailson Borges</td>
+								      <td>TURMA 3</td>
+								      <td><span class="status-produit color-five"></span>(21) 9794252335</td>
+								    </tr>
+								  </tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="stock">
+					<div class="case">
+						<div class="header-case">
+							<h2>NOVOS ALUNOS</h2>
+							
+						</div>
+						<div class="body-case">
+							<div class="all-users">
+								<div class="infos">
+								<img src="/img/perfil criança 4.jpg" width="30" height="30">
+									<div>
+									<h4>Flávio Cavalcante</h4>
+									<small>SUB-7</small>
+								</div>
+								</div>
+								
+							<div class="user-contact">
+								<span class="fa fa-facebook"></span>
+								<span class="fa fa-whatsapp"></span>
+								<span class="fa fa-phone"></span>
+							</div>
+						</div>
+
+								<div class="all-users">
+								<div class="infos">
+								<img src="/img/perfil criança 1.jpg" width="30" height="30">
+									<div>
+									<h4>Antonio Victor</h4>
+									<small>SUB-11</small>
+								</div>
+								</div>
+								
+							<div class="user-contact">
+								<span class="fa fa-facebook"></span>
+								<span class="fa fa-whatsapp"></span>
+								<span class="fa fa-phone"></span>
+							</div>
+						</div>
+
+								<div class="all-users">
+								<div class="infos">
+								<img src="/img/perfil criança 2.jpg" width="30" height="30">
+									<div>
+									<h4>Fábio Neves</h4>
+									<small>SUB-9</small>
+								</div>
+								</div>
+								
+							<div class="user-contact">
+								<span class="fa fa-facebook"></span>
+								<span class="fa fa-whatsapp"></span>
+								<span class="fa fa-phone"></span>
+							</div>
+						</div>
+
+						
+							<div class="all-users">
+								<div class="infos">
+								<img src="/img/perfil criança 3.jpg" width="30" height="30">
+									<div>
+									<h4>Dawan Vieira</h4>
+									<small>SUB-11</small>
+								</div>
+								</div>
+								
+							<div class="user-contact">
+								<span class="fa fa-facebook"></span>
+								<span class="fa fa-whatsapp"></span>
+								<span class="fa fa-phone"></span>
+							</div>
+						</div>
+						</div>
+						<button class="botaoGeral">Ver lista completa<span class="fa fa-arrow-right"></span></button>
+					</div>
+				</div>
+				<!-- GRÁFICO DE FATURAMENTO MENSAL-->
+				<div id="grafico">
+					<canvas id="grafico1"></canvas>
+    <script>
+        // Dados mensais do banco
+        var categorias = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho','Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+        var valores = [1000, 1500, 4800, 4200, 1500, 5000, 1200, 3500, 800, 1200, 1500, 800];
+
+        // Adiciona "R$" aos valores
+        var valoresFormatados = valores.map(function(valor) {
+            return 'R$ ' + valor.toFixed(2); // Formata o valor com duas casas decimais
+        });
+
+        // Obtenha o contexto do elemento canvas
+        var ctx = document.getElementById('grafico1').getContext('2d');
+
+        // gráfico de barras
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: categorias,
+                datasets: [{
+                    label: 'Receita Mensal',
+                    data: valores,
+                    backgroundColor: '#0e2f73',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value, index, values) {
+                                return 'R$ ' + value.toFixed(2); // Formata os rótulos do eixo Y
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+			  </script>
+					<!--FINAL GRÁFICO DE FATURAMENTO MENSAL-->
+
+
+					<!--GRÁFICO DE PAGANTES E INADIMPLENTES-->		  	
+				</div>
+				<div class="legende">
+					<canvas id="grafico2">
+					</canvas>
+					<script>
+						//GRÁFICO DE PAGANTES E INADIMPLENTES
+
+  const rosca = document.getElementById('grafico2');
+					
+					new Chart(rosca, {
+					type: 'doughnut',
+					data: {
+						labels: ['PAGANTES', 'INADIMPLENTES'],
+						datasets: [{
+						label: 'Pagantes',
+						data: [25, 10],
+						borderWidth: 3,
+						backgroundColor: ['#14701c',
+										  '#b80101',]
+						
+						}]
+					},
+					});
+					</script>
+				
+					
+				</div>
+				<!--INICIO GRÁFICO DE IDADES-->
+				<div id="grafico">
+					<canvas id="idadeChart" width="300" height=""></canvas>
+
+					<script>
+						// Dados de exemplo - substitua com seus próprios dados
+						var idades = [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+						var contagemIdades = [10, 15, 25, 30, 40, 35, 50, 60, 70, 80, 90, 75, 60, 45, 30];
+				
+						var ctx = document.getElementById('idadeChart').getContext('2d');
+						var idadeChart = new Chart(ctx, {
+							type: 'bar',
+							data: {
+								labels: idades,
+								datasets: [{
+									label: 'Distribuição de Idades',
+									data: contagemIdades,
+									backgroundColor: [
+																	'#0e2f73',
+															        '#0b1c40',
+																	'#2573d9',
+																	'#4192d9',
+																	'#000000',
+																	'#b80101',
+																	'#14701c', ]
+								}]
+							},
+							options: {
+								scales: {
+									y: {
+										beginAtZero: true
+									}
+								}
+							}
+						});
+					</script>
+				</div>
+				<!--FINAL GRÁFICO DE IDADES-->
+			</div>
+			
+
+			
+		</main>
+	</div>
+</body>
+</html>

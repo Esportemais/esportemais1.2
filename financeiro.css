@@ -1,0 +1,106 @@
+:root {
+	--azul_2: #0e2f73;
+	--azul_1: #0b1c40;
+	--azul_3: #2573d9;
+	--azul_4: #4192d9;
+	--cinza: #f2f2f2;
+	--danger: #b80101;
+	--success: #14701c;
+}
+*{
+	padding: 0;
+	margin: 0;
+
+	box-sizing: border-box;
+	list-style-type: none;
+	text-decoration: none;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
+}
+.botaoGeral{
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 15px;
+    background-color: var(--azul_1); /* Cor de fundo padrão */
+    color: #fff; /* Cor do texto */
+    text-decoration: none;
+    border-radius: 15px 0px 15px 0px;
+    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+    cursor: pointer;
+
+  }
+  .Titulo{
+    color: var(--azul_1);
+    padding: 10px;
+  
+  }
+ tfoot td{
+    border: #0b1c40;
+    background-color: #0b1c40;
+  }
+
+  /* Estilos para o modal (oculto por padrão) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    margin-left: 70px;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal.show {
+  display: block;
+  opacity: 1; /* Quando exibido, a opacidade é 1 (visível) */
+}
+#myModal2{
+  margin-top: 0px;
+  padding-top: 60px;
+  padding-left: 20px;
+}
+
+/* Estilos para o conteúdo do modal com transição de fade-in */
+.modal-content {
+    background: linear-gradient(#4b0a96,#0e2f73);
+    border:none;
+    margin: 10% auto;
+    margin-top: 80px;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 600px;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    color:#fff;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+h1{
+color: black;
+padding: 10px;
+}
+
+/* Estilos para o botão de fechar */
+#fecharModal {
+    float: right;
+    cursor: pointer;
+    color: var(--danger);
+    font-size: 40px;
+}
+
+.NomeDeUsuario, .CargoUsuario{
+  font-size: 15px;
+}
+
+
+
+

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/e7fb0ed515.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<link rel="stylesheet"  href="turma.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+</head>
+<body>
+	<input type="checkbox" id="menu" name="">
+	<div class="sidebar">
+		<div class="sidebar-brand">
+	
+            <img class="logo_sidebar" src="/img/Larana__Inc.__4_-re.png" alt="">
+		</div>
+		<p class="accueil"><label for="menu"><span class="fa fa-bars"></span></label><span class="accueil">MENU</span></p>
+		<div class="sidebar-menu">
+			<ul>
+				<li>
+					<a href="/index.html" id="animated-link" class="fa-solid fa-home">&#128202; RESUMO</a>			
+				</li>
+					<li>
+						<a href="/formulário.html" id="animated-link" class="fa-solid fa-home">&#128102;ADMINISTRATIVO</a>
+				</li>
+				<li>
+						<a href="turma.html" id="animated-link" class="fa-solid fa-home">&#128104;&#8205;&#128104;&#8205;&#128102;&#8205;&#128102;CONTROLE DE TURMAS</a>
+				</li>
+				<li>
+						<a href="/financeiro.html" id="animated-link" class="fa-solid fa-home">&#128181;CONTROLE FINANCEIRO</a>
+				</li>
+				<li>
+						<a href="/index.html" id="animated-link" class="fa-solid fa-home">&#127941;CENTRAL DE VENDAS</a>
+				</li>
+				<li>
+						<a href="/index.html" id="animated-link" class="fa-solid fa-home">&#128209;RELATÓRIOS</a>
+				</li>
+				<li>
+						<a href="/index.html" id="animated-link" class="fa-solid fa-home">⚽FERRAMENTAS DE TREINO</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<button onclick="toggleSidebar()"></button>
+
+	<div class="content">
+        <main>
+
+			<!------------------------------------------- TABELA DO ALUNO --------------------------------------------------------------->
+
+      <button id="openModalBtn1" class="botaoGeral">CADASTRAR TURMA</button>
+			<h1 class="Titulo">Lista de turmas</h1>
+            <div class="row">
+                <table class="table table-responsive" id="table-responsive">
+                  <thead>
+                    <tr>
+                      <th width="100px">TURMA</th>
+                      <th width="200px">HORÁRIO</th>
+                      <th width="130px">QUANTIDADE DE ALUNOS</th>
+                      <th width="150px">AÇÕES</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Sub-15</td>
+                      <td>15 horas</td>
+                      <td>22</td>
+                      <td><button id="openModalBtn2"  class="botaoGeral">EDITAR</button><button id="openModalBtn3" class="botaoGeral">RELATÓRIO</button>
+                    </tr>
+                    <tr>
+                      <td>Sub-15 Avançado</td>                     
+                      <td>18 horas</td>
+                      <td>20</td>
+                      <td><button id="openModalBtn2"  class="botaoGeral">EDITAR</button><button id="openModalBtn3" class="botaoGeral">RELATÓRIO</button>
+                      </tr>
+                    <tr>
+                      <td>Sub-9 médio</td>  
+                      <td>17 horas</td>
+                      <td>19</td>
+                      <td><button id="openModalBtn2"  class="botaoGeral">EDITAR</button><button id="openModalBtn3" class="botaoGeral">RELATÓRIO</button>
+                      </tr>
+                    <tr>
+                        <td>Sub-11</td>
+                        <td>20 horas</td>
+                        <td>12</td>
+                        <td><button id="openModalBtn2"  class="botaoGeral">EDITAR</button><button id="openModalBtn3" class="botaoGeral">RELATÓRIO</button>
+                        </tr>
+                      <tr>
+                        <td>Kids 1</td>                     
+                        <td>19 horas</td>
+                        <td>7</td>
+                        <td><button id="openModalBtn2"  class="botaoGeral">EDITAR</button><button id="openModalBtn3" class="botaoGeral">RELATÓRIO</button>
+                        </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+		<!------------------------------------------- MODAL CADASTRO DO ALUNO --------------------------------------------------------------->
+		<div id="myModal1" class="modal">
+      <div class="modal-content">
+          <span class="close" id="closeModalBtn1"></span>
+          <span id="fecharModal" style="float: right; cursor: pointer;"></span>
+
+        <div class="container">
+            <div class="cadastro_modal">
+            <form action="POST">
+              <h1 class="Titulodiadasemana">Cadastro de Turma</h1>
+                <div class="caixa">
+                    <label>Nome da Turma</label>
+                    <input type="text">
+                </div>
+                <div class="caixa">
+                <label for="horario">Selecione um horário:</label>
+                  <select id="horario">
+                    <option value="">Selecione um horário</option>
+                  </select>
+                </div>
+                <div class="caixa">
+                    <label>Professor</label>
+                    <input type="text">
+                </div>
+                  <h1 class="Titulodiadasemana">Dias da semana</h1>
+                  <div id="agenda" id="agenda">
+                    <div id="dia" onclick="selecionarDia(this)">Domingo</div>
+                    <div id="dia" onclick="selecionarDia(this)">Segunda</div>
+                    <div id="dia" onclick="selecionarDia(this)">Terça</div>
+                    <div id="dia" onclick="selecionarDia(this)">Quarta</div>
+                    <div id="dia" onclick="selecionarDia(this)">Quinta</div>
+                    <div id="dia" onclick="selecionarDia(this)">Sexta</div>
+                    <div id="dia" onclick="selecionarDia(this)">Sábado</div>
+                </div>
+    
+                <div class="caixa">
+                    <label>Campo</label>
+                    <input type="text">
+                </div>
+                <div class="caixa">
+                    <input type="submit" value="Enviar">
+                </div>
+
+
+
+            </form>
+ </div>
+    </div>
+  </div>
+</div>
+
+<!-------------------------------------------MODAL EDITAR --------------------------------------------------------------->
+<div id="myModal2" class="modal">
+  <div class="modal-content">
+      <span class="close" id="closeModalBtn2"></span>
+      <span id="fecharModal" style="float: right; cursor: pointer;"></span>
+
+    <div class="container">
+        <div class="cadastro_modal">
+        <form action="POST">
+          <h1 class="Titulodiadasemana">Editar de Turma</h1>
+            <div class="caixa">
+                <label>Nome da Turma</label>
+                <input type="text">
+            </div>
+            <div class="caixa">
+            <label for="horario">Selecione um horário:</label>
+              <select id="horario">
+                <option value="">Selecione um horário</option>
+              </select>
+            </div>
+            <div class="caixa">
+                <label>Professor</label>
+                <input type="text">
+            </div>
+              <h1 class="Titulodiadasemana">Dias da semana</h1>
+              <div id="agenda" id="agenda">
+                <div id="dia" onclick="selecionarDia(this)">Domingo</div>
+                <div id="dia" onclick="selecionarDia(this)">Segunda</div>
+                <div id="dia" onclick="selecionarDia(this)">Terça</div>
+                <div id="dia" onclick="selecionarDia(this)">Quarta</div>
+                <div id="dia" onclick="selecionarDia(this)">Quinta</div>
+                <div id="dia" onclick="selecionarDia(this)">Sexta</div>
+                <div id="dia" onclick="selecionarDia(this)">Sábado</div>
+            </div>
+
+            <div class="caixa">
+                <label>Campo</label>
+                <input type="text">
+            </div>
+            <div class="caixa">
+                <input type="submit" value="SALVAR">
+            </div>
+
+
+
+        </form>
+</div>
+</div>
+</div>
+</div> 
+
+<!------------------------------------------- MODAL RELATÓRIO --------------------------------------------------------------->
+<div id="myModal3" class="modal">
+  <div class="modal-content">
+      <span class="close" id="closeModalBtn3"></span>
+      <span id="fecharModal" style="float: right; cursor: pointer;"></span>
+
+    <div class="container">
+        <div class="cadastro_modal">
+        <form action="POST">
+          <h1 class="Titulodiadasemana">Vizualizar turma</h1>
+          <p>Deverá ter a listagem de alunos da turma</p>
+ 
+<!------------------------------------------- MODAL FINANCEIRO --------------------------------------------------------------->
+
+<!------------------------------------------- MODAL EDITAR DADOS DO ALUNO --------------------------------------------------------------->
+
+
+
+</div>
+
+
+	<script src="turma.js"></script>
+</body>
+</html>
+
+
+
+        </main>

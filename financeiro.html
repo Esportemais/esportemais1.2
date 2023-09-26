@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DASHBORD</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="financeiro.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/e7fb0ed515.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="/index.js"></script>
+
+</head>
+<body>
+	<input type="checkbox" id="menu" name="">
+	<div class="sidebar">
+		<div class="sidebar-brand">
+	
+            <img class="logo_sidebar" src="/img/Larana__Inc.__4_-re.png" alt="">
+		</div>
+
+		<div class="sidebar-menu">
+			<ul>
+				<li>
+					<a href="/index.html" id="animated-link" class="fa-solid fa-home">&#128202; RESUMO</a>			
+				</li>
+					<li>
+						<a href="/formulário.html" id="animated-link" class="fa-solid fa-home">&#128102;ADMINISTRATIVO</a>
+				</li>
+				<li>
+						<a href="turma.html" id="animated-link" class="fa-solid fa-home">&#128104;&#8205;&#128104;&#8205;&#128102;&#8205;&#128102;CONTROLE DE TURMAS</a>
+				</li>
+				<li>
+						<a href="/financeiro.html" id="animated-link" class="fa-solid fa-home">&#128181;CONTROLE FINANCEIRO</a>
+				</li>
+				<li>
+						<a href="/index.html" id="animated-link" class="fa-solid fa-home">&#127941;CENTRAL DE VENDAS</a>
+				</li>
+				<li>
+						<a href="/index.html" id="animated-link" class="fa-solid fa-home">&#128209;RELATÓRIOS</a>
+				</li>
+				<li>
+						<a href="/index.html" id="animated-link" class="fa-solid fa-home">⚽FERRAMENTAS DE TREINO</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<button onclick="toggleSidebar()">Toggle Sidebar</button>
+
+	<div class="content">
+		
+		
+	
+
+		<main>
+			<div class="cards">
+				<div class="card-single1">
+					<div id="conteudo" class="hidden">
+						<h2 id="Cash">R$ 5.000,00</h2>
+						<small id="Cash">RECEITA</small>
+					</div>
+					<div>
+						<button id="toggleButton" class="fa-solid fa-eye" style="color: #1ba419;"></button><span class="fa-solid fa-sack-dollar" style="color: #1ba419;"></span>
+					</div>
+				</div>
+					<div class="card-single4">
+					<div>
+						<h2 id="pay">R$ 2.300,30</h2>
+						<small id="pay">VALORES A RECEBER</small>
+					</div>
+					<div>
+						<span class="fa fa-money" style="color: #b41515;"></span>
+					</div>
+				</div>
+				<div class="card-single1">
+					<div>
+						<h2 id="Cash">R$ 2.300,30</h2>
+						<small id="Cash">VENDA DE PRODUTOS</small>
+					</div>
+					<div>
+						<span class="fa fa-money" style="color: #1ba419;"></span>
+					</div>
+				</div>
+				<div class="card-single4">
+					<div >
+						<h2 id="pay">R$ 2.300,30</h2>
+						<small id="pay">CUSTO OPERACIONAL</small>
+					</div>
+					<div>
+						<span class="fa fa-money" style="color: #b41515;"></span>
+					</div>
+				</div>
+				</div>
+			<div class="composant">
+				<div class="ventes">
+                    
+					<div class="case">
+                        <h1 class="Titulo" id="Cash">Mensalidadedes Pagas</h1><button class="botaoGeral">Lista Completa</button>
+						<div class="header-case">
+							
+            <div class="row">
+                <table class="table table-responsive" id="table-responsive">
+                  <thead>
+                    <tr>
+                      <th width="100px">FOTO</th>
+                      <th width="200px">NOME</th>
+                      <th width="130px">VALOR</th>
+                      <th width="150px">AÇÕES</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><img src="" alt="" sizes="" srcset=""></td>
+                      <td>Henryson Lopes</td>
+                      <td>R$110,00</td>
+                      <td><button id="openModalBtn2"  class="botaoGeral">EDITAR</button><button id="openModalBtn3" class="botaoGeral">RELATÓRIO</button>
+                    </tr>
+                    <tr>
+                        <td><img src="" alt="" sizes="" srcset=""></td>
+                      <td>Henryson Lopes</td>
+                      <td>R$110,00</td>
+                      <td><button id="openModalBtn2"  class="botaoGeral">EDITAR</button><button id="openModalBtn3" class="botaoGeral">RELATÓRIO</button>
+                      </tr>
+                    <tr>
+                        <td><img src="" alt="" sizes="" srcset=""></td>
+                      <td>Henryson Lopes</td>
+                      <td>R$110,00</td>
+                      <td><button id="openModalBtn2"  class="botaoGeral">EDITAR</button><button id="openModalBtn3" class="botaoGeral">RELATÓRIO</button>
+                      </tr>
+                    <tr>
+                        <td><img src="" alt="" sizes="" srcset=""></td>
+                        <td>Henryson Lopes</td>
+                        <td>R$110,00</td>
+                          <td><button id="openModalBtn2"  class="botaoGeral">EDITAR</button><button id="openModalBtn3" class="botaoGeral">RELATÓRIO</button>
+                        </tr>
+                      <tr>
+                        <td><img src="" alt="" sizes="" srcset=""></td>
+                        <td>Henryson Lopes</td>
+                        <td>R$110,00</td>
+                          <td><button id="openModalBtn2"  class="botaoGeral">EDITAR</button><button id="openModalBtn3" class="botaoGeral">RELATÓRIO</button>
+                        </tr>
+						<td></td>
+                        <tr>
+                            <th colspan="4">TOTAL EM MENSALIDADES PENDENTESㅤㅤ<div style="display: inline-block;">R$ㅤ2.500,00</div></th>
+                        </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+				<div class="stock">
+					<div class="case">
+						<div class="header-case">
+							<h2>CONTROLE DE PLANOS</h2>
+							
+						</div>
+						<div class="body-case">
+							<div class="all-users">
+								<button class="botaoGeral">Criar novo plano</BUtton>
+								</div>
+								</div>
+								<div class="body-case">
+									<div class="all-users">
+										<button class="botaoGeral">Editar plano</BUtton>
+										</div>
+										</div>
+										<div class="body-case">
+											<div class="all-users">
+												<button class="botaoGeral">Cotrole de caixa</BUtton>
+												</div>
+												</div>
+												
+								</div>
+						</div>
+				<div class="ventes">
+				
+					<div class="case">
+						<h1 class="Titulo" id="pay">Mensalidadedes Pendentes</h1><button class="botaoGeral">Lista Completa</button>
+						<div class="header-case">
+							
+			<div class="row">
+				<table class="table table-responsive" id="table-responsive">
+				  <thead>
+					<tr>
+					  <th width="100px">FOTO</th>
+					  <th width="200px">NOME</th>
+					  <th width="130px">VALOR</th>
+					  <th width="150px">AÇÕES</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <td><img src="" alt="" sizes="" srcset=""></td>
+					  <td>Henryson Lopes</td>
+					  <td>R$110,00</td>
+					  <td><button id="openModalBtn2"  class="botaoGeral">EDITAR</button><button id="openModalBtn3" class="botaoGeral">RELATÓRIO</button>
+					</tr>
+					<tr>
+						<td><img src="" alt="" sizes="" srcset=""></td>
+					  <td>Henryson Lopes</td>
+					  <td>R$110,00</td>
+					  <td><button id="openModalBtn2"  class="botaoGeral">EDITAR</button><button id="openModalBtn3" class="botaoGeral">RELATÓRIO</button>
+					  </tr>
+					<tr>
+						<td><img src="" alt="" sizes="" srcset=""></td>
+					  <td>Henryson Lopes</td>
+					  <td>R$110,00</td>
+					  <td><button id="openModalBtn2"  class="botaoGeral">EDITAR</button><button id="openModalBtn3" class="botaoGeral">RELATÓRIO</button>
+					  </tr>
+					<tr>
+						<td><img src="" alt="" sizes="" srcset=""></td>
+						<td>Henryson Lopes</td>
+						<td>R$110,00</td>
+						  <td><button id="openModalBtn2"  class="botaoGeral">EDITAR</button><button id="openModalBtn3" class="botaoGeral">RELATÓRIO</button>
+						</tr>
+					  <tr>
+						<td><img src="" alt="" sizes="" srcset=""></td>
+						<td>Henryson Lopes</td>
+						<td>R$110,00</td>
+						  <td><button id="openModalBtn2"  class="botaoGeral">EDITAR</button><button id="openModalBtn3" class="botaoGeral">RELATÓRIO</button>
+						</tr>
+						<td></td>
+						<tr>
+							<th colspan="4">TOTAL EM MENSALIDADES PAGASㅤㅤ<div style="display: inline-block;">R$ㅤ2.500,00</div></th>
+						</tr>
+				  </tbody>
+				</table>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="stock">
+			<div class="case">
+				<div class="header-case">
+					<h2>Métodos de Cobrança</h2>	
+				</div>
+				<div class="body-case">
+					<div class="all-users">
+						<button class="botaoGeral">Criar novo plano</BUtton>
+						</div>
+						</div>
+						<div class="body-case">
+							<div class="all-users">
+								<button class="botaoGeral">Editar plano</BUtton>
+								</div>
+								</div>
+								<div class="body-case">
+									<div class="all-users">
+										<button class="botaoGeral">Cotrole de caixa</BUtton>
+										</div>
+										</div>
+										
+						</div>
+				</div>
+	
+				
+</body>
+</html>
